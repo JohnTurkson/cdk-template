@@ -1,4 +1,5 @@
 plugins {
+    application
     kotlin("jvm") version "1.6.21"
 }
 
@@ -10,5 +11,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    implementation("software.amazon.awscdk:aws-cdk-lib:2.24.1")
+}
+
+application {
+    mainClass.set("ExampleAppKt")
 }
